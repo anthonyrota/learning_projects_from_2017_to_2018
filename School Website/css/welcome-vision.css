@@ -1,0 +1,122 @@
+.welcome-vision {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #FEFEFE;
+  padding: 0 13%;
+  border-bottom: 1px solid #C8FFFF;
+}
+
+.welcome-vision .content {
+  position: relative;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.welcome-vision section {
+  float: left;
+  width: 50%;
+  margin-bottom: 130px;
+}
+
+.welcome-vision .image {
+  float: right;
+  margin-top: 50px;
+  width: 40%;
+  height: 250px;
+  border: 5px #27ae60 solid;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .1s ease-in-out;
+}
+
+.welcome-vision .image img {
+  margin: -1px;
+  width: 101%;
+  height: 101%;
+  background: url('http://baulkhamhillshighschool.com.au/photos/slideshow_001_small.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: .1s ease-in-out;
+  animation: 40s slideshowImage infinite;
+}
+
+.welcome-vision .image:hover img {
+  width: 110%;
+  height: 110%;
+  margin: -3%;
+}
+
+@keyframes slideshowImage {
+    0% { background: url('http://baulkhamhillshighschool.com.au/photos/slideshow_001_small.jpg') no-repeat; background-size: cover; background-position: center; }
+   10% { background: url('http://baulkhamhillshighschool.com.au/photos/slideshow_002_small.jpg') no-repeat; background-size: cover; background-position: center; }
+   20% { background: url('http://baulkhamhillshighschool.com.au/photos/slideshow_003_small.jpg') no-repeat; background-size: cover; background-position: center; }
+   30% { background: url('http://baulkhamhillshighschool.com.au/photos/slideshow_004_small.jpg') no-repeat; background-size: cover; background-position: center; }
+   40% { background: url('http://baulkhamhillshighschool.com.au/photos/slideshow_005_small.jpg') no-repeat; background-size: cover; background-position: center; }
+   50% { background: url('http://baulkhamhillshighschool.com.au/photos/slideshow_006_small.jpg') no-repeat; background-size: cover; background-position: center; }
+   60% { background: url('http://baulkhamhillshighschool.com.au/photos/slideshow_007_small.jpg') no-repeat; background-size: cover; background-position: center; }
+   70% { background: url('http://baulkhamhillshighschool.com.au/photos/slideshow_008_small.jpg') no-repeat; background-size: cover; background-position: center; }
+   80% { background: url('http://baulkhamhillshighschool.com.au/photos/slideshow_009_small.jpg') no-repeat; background-size: cover; background-position: center; }
+   90% { background: url('http://baulkhamhillshighschool.com.au/photos/slideshow_010_small.jpg') no-repeat; background-size: cover; background-position: center; }
+}
+
+.welcome-vision section h1 {
+  color: #2C3C2C;
+  font-size: 29px;
+  font-weight: 500;
+}
+
+.welcome-vision section p {
+  color: #666;
+  font-size: 17px;
+  padding-right: 10px;
+  font-weight: 400;
+}
+
+.welcome-vision .button {
+  position: absolute;
+  bottom: 40px;
+  left: 30%;
+  right: 30%;
+  box-shadow: 0 3px 1px #2980b9;
+  margin-bottom: 20px;
+}
+
+.welcome-vision .button:hover {
+  transform: translateY(2px);
+  box-shadow: 0 1px 1px #2980b9;
+}
+
+@media screen and (max-width: 1125px) {.welcome-vision .image { margin-top: 70px; }}
+@media screen and (max-width: 1000px) {.welcome-vision .image { margin-top: 90px; }}
+@media screen and (max-width: 845px ) {
+  .welcome-vision {
+    padding: 0 6%;
+  }
+  
+  .welcome-vision .content {
+    margin-top: 30px;
+  }
+  
+  .welcome-vision section {
+    width: 90%;
+    margin: 0;
+    margin-left: 8.5%;
+  }
+  
+  .welcome-vision section h1 {
+    font-size: 22px;
+  }
+  
+  .welcome-vision section p {
+    font-size: 15px;
+  }
+  
+  .welcome-vision .image {
+    width: 80%;
+    margin-right: 10%;
+    margin-top: 20px;
+    margin-bottom: 140px;
+  }
+}

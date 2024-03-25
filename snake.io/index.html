@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>snake.io</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="libs/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="menu">
+      <div class="background"></div>
+      
+      <div class="mid">
+        <div class="title">snake<span>.io</span></div>
+        <div class="help">Don't lose to other players!</div>
+        <input class="nickname" type="text" placeholder="nickname" maxlength="18" autofocus>
+        <a class="play">Play</a>
+      </div>
+      
+      <div class="skins">
+        <div>Skins</div>
+      </div>
+      
+      <div class="stats">
+        <ul>
+          <li><span>32</span> Wins</li>
+          <li><span>59</span> Games</li>
+          <li><span>73</span> Coins</li>
+          <li><span>42</span> Hours</li>
+          <li><span>17</span> Minutes</li>
+        </ul>
+      </div>
+      
+      <div class="options">
+        <ul>
+          <li><i class="fa fa-volume-up"></i></li>
+          <li><i class="fa fa-sign-in"></i></li>
+          <li><i class="fa fa-gift"></i></li>
+        </ul>
+      </div>
+      
+      <div class="media">
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook">
+            <span>Facebook</span>
+          </i></a></li>
+          <li><a href="#"><i class="fa fa-twitter">
+            <span>Twitter</span>
+          </i></a></li>
+          <li><a href="#"><i class="fa fa-instagram">
+            <span>Insta</span>
+          </i></a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="game">
+      <!--<canvas id="game"></canvas>-->
+      
+      <div class="overlay">
+        <span class="coords"></span>
+      </div>
+    </div>
+    
+    <script src="libs/jquery.js"></script>
+    <script src="libs/pixi.js"></script>
+    
+    <script src="js/polyfills.js"></script>
+    <script src="js/HTMLManager.js"></script>
+    <script src="js/InputManager.js"></script>
+    <script src="js/Camera.js"></script>
+    <script src="js/Renderer.js"></script>
+    <script src="js/Snake.js"></script>
+    <script src="js/ViewLimit.js"></script>
+    <script src="js/GameManager.js"></script>
+    
+    <script>
+      window.addEventListener('load', () => new GameManager());
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WebDesignBlog | Home</title>
+    
+    <link rel="stylesheet" type="text/css" href="/css/site.css">
+    <link rel="stylesheet" type="text/css" href="/libs/highlight/styles/monokai.css">
+  </head>
+  <body class="admin-page">
+    <section class="admin-container admin-edit site-section">
+      <div class="container site-section-container site-section-container-collapse-small">
+        <div class="site-section-child align-center">
+          <h1 class="site-brand-title">Search Your Posts</h1>
+          <div class="site-form-input-group">
+            <label>Enter Search Here</label>
+            <input type="text" class="admin-search" placeholder="Some Post...">
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="admin-container admin-edit site-section">
+      <div class="container site-section-container">
+        <div class="site-section-child align-center">
+          <h1 class="site-brand-title admin-search-count text-align-center"></h1>
+        </div>
+      </div>
+    </section>
+    
+    <section class="admin-edit site-search-results"></section>
+    
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="/libs/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.all.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+    <script type="module" src="/js/admin/admin-edit.js"></script>
+  </body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>WORD MEMO</title>
+    
+    <link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.soft.css">
+    <link rel="stylesheet" href="css/loader.css">
+  </head>
+  <body>
+    <div class="page loading-page">
+      <div class="content flex-center">
+        <div class="loader">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="page home-page">
+      <div class="header vertical-align justify-between shadow-dark">
+        <div class="highscore-container">
+          <h1 class="highscore-title align-center">BEST</h1>
+          <h2 class="highscore align-center">0</h2>
+        </div>
+        <div class="coins-container vertical-align justify-between">
+          <h1 class="coins">0</h1>
+          <svg class="coin-svg">
+            <circle cx="0" cy="0" r="5" stroke="gold" stroke-width="5" fill="transparent"/>
+          </svg>
+        </div>
+      </div>
+      
+      <div class="content flex-center">
+        <h1 class="title rainbow-letters">Word Memo</h1>
+        <ul class="button-container">
+          <li><a class="navigate-inventory-page button button-large bg-primary">Play</a></li>
+          <li><a class="navigate-shop-page button button-large bg-secondary">Shop</a></li>
+          <li><a class="navigate-stats-page button button-large bg-accent">Stats</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer game-footer vertical-align shadow-dark">
+        <i class="fa fa-volume-up icon-big toggle-sound"></i>
+      </div>
+    </div>
+    
+    <div class="page stats-page">
+      <div class="header flex-center shadow-dark">
+        <h1 class="bold uppercase">Stats</h1>
+      </div>
+      
+      <div class="content stats-content">
+        <!--<div class="card-container">-->
+        <!--  <div class="card shadow-dark">-->
+        <!--    <ul class="card-content flex-center">-->
+        <!--      <li class="card-item flex-center">-->
+        <!--        <h1 class="margin-bottom-small">Highest Level</h1>-->
+        <!--        <h2 class="gold-text">73</h2>-->
+        <!--      </li>-->
+        <!--      <li class="card-item flex-center">-->
+        <!--        <h1 class="margin-bottom-small">High Score</h1>-->
+        <!--        <h2 class="gold-text">539</h2>-->
+        <!--      </li>-->
+        <!--    </ul>-->
+        <!--  </div>-->
+        <!--</div>-->
+      </div>
+      
+      <div class="footer flex-center shadow-dark">
+        <div class="navigate-home-page opacity-hover"><i class="fa fa-times icon-big"></i></div>
+      </div>
+    </div>
+    
+    <div class="page shop-page">
+      <div class="header vertical-align justify-between shadow-dark">
+        <div class="highscore-container">
+          <h1 class="highscore-title align-center">BEST</h1>
+          <h2 class="highscore align-center">0</h2>
+        </div>
+        <h1 class="bold uppercase">Shop</h1>
+        <div class="coins-container vertical-align justify-between">
+          <h1 class="coins">0</h1>
+          <svg class="coin-svg">
+            <circle cx="0" cy="0" r="5" stroke="gold" stroke-width="5" fill="transparent"/>
+          </svg>
+        </div>
+      </div>
+      
+      <div class="content padding shop-content">
+        <!--<div class="card-container">-->
+        <!--  <div class="card-header">Boosters (Increase Starting Level)</div>-->
+        <!--  <div class="card shadow-dark">-->
+        <!--    <ul class="card-content flex-center">-->
+        <!--      <li class="card-item flex-center">-->
+        <!--        <div class="margin-bottom-small">Small</div>-->
+        <!--        <i class="fa fa-rocket icon-small gold-text"></i>-->
+        <!--      </li>-->
+        <!--      <li class="card-item flex-center">-->
+        <!--        <div class="gold-button">-->
+        <!--          <div class="margin-bottom-small">Upgrade</div>-->
+        <!--          <div class="align-center">$20</div>-->
+        <!--        </div>-->
+        <!--      </li>-->
+        <!--      <li class="card-item flex-center">-->
+        <!--        <div class="margin-bottom-small">Start Level</div>-->
+        <!--        <div class="gold-text">3</div>-->
+        <!--      </li>-->
+        <!--    </ul>-->
+        <!--  </div>-->
+        <!--</div>-->
+      </div>
+      
+      <div class="footer flex-center shadow-dark">
+        <div class="navigate-home-page opacity-hover"><i class="fa fa-times icon-big"></i></div>
+      </div>
+    </div>
+    
+    <div class="page inventory-page">
+      <div class="header vertical-align justify-between shadow-dark">
+        <div class="highscore-container">
+          <h1 class="highscore-title align-center">BEST</h1>
+          <h2 class="highscore align-center">73</h2>
+        </div>
+        <h1 class="bold uppercase">Inventory</h1>
+        <div class="coins-container vertical-align justify-between">
+          <h1 class="coins">0</h1>
+          <svg class="coin-svg">
+            <circle cx="0" cy="0" r="5" stroke="gold" stroke-width="5" fill="transparent"/>
+          </svg>
+        </div>
+      </div>
+      
+      <div class="content padding">
+        <div class="card-container inventory-container">
+          <!--<div class="card shadow-dark">-->
+          <!--  <ul class="card-content flex-center">-->
+          <!--    <li class="card-item flex-center">-->
+          <!--      <div class="margin-bottom-small">Small Booster</div>-->
+          <!--      <i class="fa fa-rocket icon-small gold-text"></i>-->
+          <!--    </li>-->
+          <!--    <li class="card-item flex-center">-->
+          <!--      <div class="margin-bottom-small">Amount</div>-->
+          <!--      <div class="align-center">6</div>-->
+          <!--    </li>-->
+          <!--    <li class="card-item flex-center">-->
+          <!--      <div class="red-button align-center">-->
+          <!--        <div class="margin-bottom-small uppercase bold">Choose</div>-->
+          <!--        <i class="fa fa-times icon-small"></i>-->
+          <!--      </div>-->
+          <!--    </li>-->
+          <!--  </ul>-->
+          <!--</div>-->
+          <!--<div class="card shadow-dark">-->
+          <!--  <ul class="card-content flex-center">-->
+          <!--    <li class="card-item flex-center">-->
+          <!--      <div class="margin-bottom-small">Medium Booster</div>-->
+          <!--      <i class="fa fa-rocket icon-small gold-text"></i>-->
+          <!--    </li>-->
+          <!--    <li class="card-item flex-center">-->
+          <!--      <div class="margin-bottom-small">Amount</div>-->
+          <!--      <div class="align-center">4</div>-->
+          <!--    </li>-->
+          <!--    <li class="card-item flex-center">-->
+          <!--      <div class="green-button align-center">-->
+          <!--        <div class="margin-bottom-small uppercase bold">Choose</div>-->
+          <!--        <i class="fa fa-check icon-small"></i>-->
+          <!--      </div>-->
+          <!--    </li>-->
+          <!--  </ul>-->
+          <!--</div>-->
+        </div>
+      </div>
+      
+      <div class="footer game-footer vertical-align justify-between shadow-dark">
+        <div class="navigate-home-page opacity-hover"><i class="fa fa-arrow-left icon-big"></i></div>
+        <div class="navigate-memo-page opacity-hover"><i class="fa fa-arrow-right icon-big"></i></div>
+      </div>
+    </div>
+    
+    <div class="page memo-page">
+      <div class="header vertical-align justify-between shadow-dark">
+        <div class="highscore-container">
+          <h1 class="highscore-title align-center">BEST</h1>
+          <h2 class="highscore align-center">73</h2>
+        </div>
+        <div class="word-container">
+          <h1 class="word danger-text bold uppercase">Sport</h1>
+        </div>
+        <div class="coins-container vertical-align justify-between">
+          <h1 class="coins">0</h1>
+          <svg class="coin-svg">
+            <circle cx="0" cy="0" r="5" stroke="gold" stroke-width="5" fill="transparent"/>
+          </svg>
+        </div>
+      </div>
+      
+      <div class="content">
+        <div class="card-container game-card-container">
+          <!--<div class="card shadow-dark">-->
+          <!--  <ul class="card-content flex-center">-->
+          <!--    <li class="card-item flex-center">-->
+          <!--      <div class="letter-label">Letter</div>-->
+          <!--      <div class="letter spin-right">S</div>-->
+          <!--    </li>-->
+          <!--    <li class="card-item flex-center">-->
+          <!--      <div class="letter-label">Color</div>-->
+          <!--      <div class="letter spin-right">R</div>-->
+          <!--    </li>-->
+          <!--    <li class="card-item flex-center">-->
+          <!--      <div class="letter-label">Spin</div>-->
+          <!--      <div class="letter spin-left">P</div>-->
+          <!--    </li>-->
+          <!--  </ul>-->
+          <!--</div>-->
+        </div>
+      </div>
+      
+      <div class="footer game-footer vertical-align justify-between shadow-dark">
+        <div class="navigate-home-page opacity-hover"><i class="fa fa-arrow-left icon-big"></i></div>
+        <h1 class="timer green-text bold">20</h1>
+        <div class="navigate-game-page opacity-hover"><i class="fa fa-arrow-right icon-big"></i></div>
+      </div>
+    </div>
+    
+    <div class="page game-page">
+      <div class="header vertical-align justify-between shadow-dark">
+        <div class="highscore-container">
+          <h1 class="highscore-title align-center">BEST</h1>
+          <h2 class="highscore align-center">0</h2>
+        </div>
+        <div class="word-container">
+          <h1 class="word-progress bold uppercase"><span class="word-not-finished camouflage-text"></span></h1>
+        </div>
+        <div class="coins-container vertical-align justify-between">
+          <h1 class="coins">0</h1>
+          <svg class="coin-svg">
+            <circle cx="0" cy="0" r="5" stroke="gold" stroke-width="5" fill="transparent"/>
+          </svg>
+        </div>
+      </div>
+      
+      <div class="content game-grid flex-center">
+        <!--<div class="grid shadow-dark">-->
+        <!--  <div class="row">-->
+        <!--    <div class="col flex-center"><div class="letter">A</div></div>-->
+        <!--    <div class="col flex-center popout"><div class="letter">S</div></div>-->
+        <!--    <div class="col flex-center"><div class="letter">O</div></div>-->
+        <!--    <div class="col flex-center"><div class="letter">Q</div></div>-->
+        <!--  </div>-->
+        <!--</div>-->
+      </div>
+      
+      <div class="footer game-footer vertical-align justify-between shadow-dark">
+        <div class="end-game opacity-hover"><i class="fa fa-times icon-big"></i></div>
+        <h1 class="timer green-text bold">20</h1>
+        <div class="get-hint opacity-hover"><i class="fa fa-question icon-big"></i></div>
+      </div>
+    </div>
+    
+    <div class="page finished-page">
+      <div class="header vertical-align justify-between shadow-dark">
+        <div class="highscore-container">
+          <h1 class="highscore-title align-center">BEST</h1>
+          <h2 class="highscore align-center">0</h2>
+        </div>
+        <div class="word-container">
+          <h1 class="word-progress bold uppercase"><span class="word-not-finished camouflage-text"></span></h1>
+        </div>
+        <div class="coins-container vertical-align justify-between">
+          <h1 class="coins">0</h1>
+          <svg class="coin-svg">
+            <circle cx="0" cy="0" r="5" stroke="gold" stroke-width="5" fill="transparent"/>
+          </svg>
+        </div>
+      </div>
+      
+      <div class="content flex-center">
+        <div class="modal shadow-dark flex-center">
+          <h1 class="title won-or-loss-statement">Congratz!</h1>
+          <h2 class="margin-bottom">Your Results</h2>
+          <div class="grid margin-bottom-large transparent flex-row auto-size">
+            <div class="col padding-horizontal"><i class="fa fa-star star icon-big"></i></div>
+            <div class="col padding-horizontal"><i class="fa fa-star star icon-big"></i></div>
+            <div class="col padding-horizontal"><i class="fa fa-star star icon-big"></i></div>
+          </div>
+          <h2 class="score-or-level-message">Your Score</h2>
+          <h2 class="big-text score">0</h2>
+          
+          <ul>
+            <li class="finished-game-start-again button button-small button-inline bg-primary opacity-hover">Continue</li>
+            <li class="finished-game-go-home button button-small button-inline bg-secondary opacity-hover fa fa-home icon-large"></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer flex-center">
+        <h1 class="timer green-text bold">20</h1>
+      </div>
+    </div>
+    
+    <script src="libs/polyfills.js"></script>
+    <script src="libs/sweetalert.js"></script>
+    <script src="libs/store.js"></script>
+    <script src="libs/jquery.js"></script>
+    <script src="libs/jquery-fastclick.js"></script>
+    
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

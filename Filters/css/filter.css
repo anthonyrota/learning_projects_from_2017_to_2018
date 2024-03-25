@@ -1,0 +1,505 @@
+/* Filter Wrapper
+   =============================== */
+.wrapper {
+  position: relative;
+  padding: 0 10%;
+}
+
+/* Upload Button
+   =============================== */
+.upload {
+  position: relative;
+  width: 400px;
+  height: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+/* Submit Button
+   =============================== */
+.submit-button {
+  position: absolute;
+  width: calc(50% - 2.5px);
+  height: 100%;
+  text-align: center;
+  border-radius: 4px;
+}
+
+/* Upload Button
+   =============================== */
+#upload {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#upload + label {
+  left: 0;
+  background: #d3394c;
+}
+
+#upload + label, #submit {
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #f1e5e6;
+  outline: 0;
+  border: 0;
+  margin: 0;
+}
+
+#upload + label:focus, #upload + label:hover {
+  background: #722040;
+}
+
+/* Submit Button
+   =============================== */
+#submit {
+  right: 0;
+  cursor: pointer;
+  background: #95a5a6;
+}
+
+#submit:hover {
+  background: #7f8c8d;
+}
+
+/* Filter Container
+   =============================== */
+.wrapper .filter-container {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.65);
+}
+
+/* Filter Canvas
+   =============================== */
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* Filter Cards Container
+   =============================== */
+.wrapper .filters {
+  margin: 0;
+  padding: 0;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 650px;
+}
+
+/* Filter Cards
+   =============================== */
+.wrapper .filters > li {
+  margin: 30px 0;
+  padding: 30px;
+  display: block;
+  list-style: none;
+  height: auto;
+  min-height: 120px;
+  width: 100%;
+  background: #3498db;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.45), 0 4px 1px #2980b9;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* Close Button */
+.wrapper .filters > li .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
+
+/* Dropdown Options */
+.wrapper .filters > li .dropdown {
+  position: relative;
+}
+
+.wrapper .filters > li .dropdown input {
+  display: none;
+}
+
+.wrapper .filters > li .dropdown label {
+  font-size: 17px;
+  font-weight: bold;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.wrapper .filters > li .dropdown label:before {
+  position: relative;
+  display: inline-block;
+  content: "\25B8";
+  transition: .1s ease-in-out;
+  margin-right: 7px;
+}
+
+.wrapper .filters > li .dropdown input:checked ~ label:before {
+  transform: rotate(90deg);
+  top: 2px;
+}
+
+.wrapper .filters > li .dropdown input:checked ~ .options {
+  animation: dropdown .3s ease;
+  max-height: 115px;
+  overflow: scroll;
+}
+
+
+/* Dropdown Options Container UL */
+.wrapper .filters > li .dropdown .options {
+  max-height: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: calc(100% + 6px);
+  width: 200px;
+  background: #2A89C8;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.wrapper .filters > li .dropdown .options li {
+  margin: 0;
+  padding: 5px 10%;
+  list-style: none;
+  cursor: pointer;
+}
+
+.wrapper .filters > li .dropdown .options li:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+/* Add Filter Buttons
+   =============================== */
+.add-button-container {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+/* Add Filter Class
+   =============================== */
+.add-button {
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-block;
+  padding: 11px 24px;
+  border-radius: 50px;
+  box-shadow: 0 3px 1px #8e44ad;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  color: #f1e5e6;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  margin-top: 10px;
+  cursor: pointer;
+  background: #9b59b6;
+}
+
+.add-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 1px #8e44ad;
+}
+
+/* UL Dropdown Animation
+   =============================== */
+@keyframes dropdown {
+  from {
+    max-height: 0;
+    overflow: hidden;
+  }
+  
+  to {
+    max-height: 115px;
+    overflow: scroll;
+  }
+}
+
+/* Small Media Queries
+   =============================== */
+@media screen and (max-width: 700px) {
+  .wrapper .filters {
+    width: 95vw;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .upload {
+    width: 97vw;
+    height: 100px;
+  }
+  
+  .submit-button {
+    width: calc(90% - 2.5px);
+    height: calc(50% - 2.5px);
+    position: relative;
+    float: left;
+    left: 50% !important;
+    transform: translateX(-50%);
+    display: block;
+  }
+  
+  #submit {
+    margin-top: 5px;
+  }
+}
+
+/* Filter Toggles
+   =============================== */
+.toggles {
+  width: 90%;
+  margin: 0;
+  padding: 0;
+  margin-left: 5%;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .toggles {
+    width: 96%;
+    margin-left: 2%;
+  }
+}
+
+.toggles li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.toggles li .name,
+.input-description {
+  float: left;
+  font-size: 17px;
+  margin-left: 20px;
+  margin-bottom: 4px;
+}
+
+.input-description {
+  margin-left: 10px;
+}
+
+.toggles li .count,
+.input-value {
+  float: right;
+  padding-left: 10px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  margin-right: 20px;
+}
+
+.input-value {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Sliders
+   =============================== */
+.slider {
+  -webkit-appearance: none;
+  background: transparent;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.slider:focus {
+  outline: none;
+}
+
+.slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 16.4px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.13);
+  border-radius: 20px;
+}
+
+.slider::-webkit-slider-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background: rgba(52, 73, 94, 1);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -1.8px;
+}
+
+.slider::-moz-range-track {
+  width: 100%;
+  height: 16.4px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.13);
+  border-radius: 20px;
+}
+
+.slider::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background: rgba(52, 73, 94, 1);
+  cursor: pointer;
+}
+
+.slider::-ms-track {
+  width: 100%;
+  height: 16.4px;
+  cursor: pointer;
+}
+
+.slider::-ms-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background: rgba(52, 73, 94, 1);
+  cursor: pointer;
+  height: 16.4px;
+}
+
+
+/* Change when the container has a color input */
+.color-container .count::after {
+  content: 'Enter color in HEX';
+  color: inherit;
+}
+
+/* Text Inputs
+   =============================== */
+.text-input {
+  appearance: none;
+  display: block;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 16px;
+  font-family: Monospace;
+  font-size: 17px;
+  box-shadow: none;
+  border-radius: 2px;
+  outline: 0;
+  border: 0;
+  background: rgba(0, 0, 0, 0.13);
+  color: #fff;
+  padding: 6px 0;
+  text-align: center;
+}
+
+.text-input:focus {
+  outline: none;
+  opacity: .88;
+}
+
+/* Overlay
+   =============================== */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  transition: .4s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.overlay:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Download Image Button
+   =============================== */
+.download-button {
+  padding: 12px 20px;
+  background: #c0392b;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: .9;
+  transition: .1s;
+  text-transform: uppercase;
+  font-family: Arial;
+  color: #fff;
+}
+
+.download-button:hover {
+  opacity: 1;
+}
+
+/* Download Image
+   =============================== */
+.download-info {
+  color: #333;
+  font-size: 20px;
+}
+
+#file-name {
+  margin-bottom: 23px;
+}
+
+#file-quality {
+  margin-bottom: 40px;
+}
+
+/* Matrix Input
+   =============================== */
+.matrix-header {
+  display: block;
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+.matrix-table {
+  margin-top: 2px;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.matrix-table td {
+  margin: 0;
+  display: inline-block;
+  width: 33.3%;
+  position: relative;
+}
+
+.matrix-table td:before {
+  content: '';
+  padding-top: 40%;
+  display: block;
+}
+
+.matrix-input {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Stylesheet-->
+  <link rel="stylesheet" type="text/css" href="style/game.css">
+  <meta name="viewport" content="width=devide-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+</head>
+
+<body>
+
+  <div id="fpsOutput">0fps</div><!--FPS Counter // Testing-->
+  <div id="simulation-container">
+    <div class="mainmenu">
+
+    </div>
+    
+    <div class="game">
+      <div id="background">
+        <div id="info">
+          <a id="pause">
+            <svg viewBox="0 0 17 110" width="100%" height="100%">
+              <rect x="-18" y="27.5" rx="5" ry="5" width="17" height="55" fill="#333"/>
+              <rect x="18" y="27.5" rx="5" ry="5" width="17" height="55" fill="#333"/>
+            </svg>
+          </a><!--Pause Button-->
+          <div id="score">
+            <span>&#160;SCORE <br />
+              <p id="score-value"></p><!--Current Score-->
+            </span><!--Score Wrapper-->
+          </div><!--Game Score Wrapper-->
+
+          <div id="hit-count">
+            <span>&#160;HIT <br />
+              <p id="targets-hit"><span id="targets-hit-value">70 | 500</span></p>
+            </span>
+          </div>
+
+          <div id="coins">
+            <span id="coins-value"></span><!--Current Amount Of Coins-->
+            <svg id="coins-image">
+              <circle id="coins-svg" cx="0" cy="0" r="20" stroke="gold" stroke-width="5" fill="transparent"/><!--Circle For Coin Icon-->
+            </svg><!--Svg For Coin Icon // Container-->
+          </div><!--Coin Wrapper-->
+        </div><!--Game Info Wrapper-->
+
+        <div id="stats">
+          <div id="timer">
+            <p id="timer-value"></p><!--Game Level Text-->
+          </div>
+        </div>
+      </div><!--Game Background Wrapper-->
+
+      <div id="game-screen">
+        <canvas id="game-canvas"></canvas><!--Game Canvas-->
+        <div id="pause-screen">
+          <a id="close-pause">&times;</a><!--Close The Screen Pause Menu-->
+
+          <div class="pause-container">
+            <p class="pause-text">PAUSE</p><!--Pause Main Header-->
+
+            <div class="pause-buttons">
+              <a id="pause-button--continue" class="pause-button">CONTINUE</a><!--Pause Button Continue-->
+              <a id="pause-button--restart" class="pause-button">RESTART</a><!--Pause Button Restart-->
+              <a id="pause-button--mainmenu" class="pause-button">MAIN MENU</a><!--Pause Button Main Menu-->
+            </div><!--Pause Button Container Wrapper-->
+
+            <div class="pause-icons">
+              <a id="pause-icon--togglesound" class="pause-icon"></a><!--Pause Icon Toggle Sound-->
+              <a id="pause-icon--thumbsup" class="pause-icon"></a><!--Pause Icon Like The Game-->
+              <a id="pause-icon--noadds" class="pause-icon"></a><!--Pause Icon Disable Adds-->
+            </div><!--Pause Icons Wrapper-->
+          </div><!--Pause Screen Container-->
+        </div><!--Pause Screen Wrapper-->
+      </div><!--Game Canvas Wrapper-->
+    </div><!--Game Container Wrapper-->
+  </div><!--Simulation Wrapper-->
+
+  <!--Scripts-->
+
+  <!--Options-->
+  <script src="js/options.js"></script>
+
+  <!--DOM-->
+  <script src="js/DOM.js"></script>
+
+  <!--Colors-->
+  <script src="js/Common/color.js"></script>
+
+  <!--Helpers-->
+  <script src="js/Common/helpers.js"></script>
+  <script src="js/sound.js"></script>
+
+  <!--Game-->
+  <script src="js/Game/canvas.js"></script>
+  <script src="js/Game/render.js"></script>
+  <script src="js/Game/renderRatio.js"></script>
+  <script src="js/Game/InputManager.js"></script>
+  <script src="js/Game/world.js"></script>
+  <script src="js/Game/def.js"></script>
+  <script src="js/Game/cannon.js"></script>
+  <script src="js/Game/target.js"></script>
+  <script src="js/Game/timer.js"></script>
+  <script src="js/Game/GameManager.js"></script>
+
+  <!--Text Captions-->
+  <script src="js/Game/caption.js"></script>
+
+  <!--Math-->
+  <script src="js/Common/constants.js"></script>
+
+  <!--Shapes-->
+  <script src="js/Collision/Vector.js"></script>
+  <script src="js/Collision/Shapes/Box.js"></script>
+  <script src="js/Collision/Shapes/Circle.js"></script>
+  <script src="js/Collision/Shapes/Polygon.js"></script>
+  <script src="js/Collision/Shapes/RegularPolygon.js"></script>
+
+  <!--Bodies-->
+  <script src="js/Collision/Body.js"></script>
+
+  <!--Collision-->
+  <script src="js/Collision/Manifold.js"></script>
+  <script src="js/Collision/SAT.js"></script>
+
+  <!--Animation Frame Polyfill-->
+  <script src="js/Common/requestAnimationFrame.js"></script>
+
+  <!--Testing-->
+  <script src="TestCode.js"></script>
+</body>
+
+</html>

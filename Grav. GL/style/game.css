@@ -1,0 +1,357 @@
+/* Global */
+@font-face {
+  font-family: 'Function Regular';
+  src: url('../assets/Function Regular.ttf');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  user-select: none;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #232323;
+}
+
+#simulation-container {
+  margin: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /**
+   * Set simulation ratio to 9 : 16
+   */
+  /*width: 100vw;
+  height: 100vh;*/
+  width: calc(96vh * 9 / 16);
+  height: 96vh;
+  border: 2.5px #fff solid;
+}
+
+/* Detect Phone Users */
+@media only screen and (max-device-width: 480px) {
+  #simulation-container {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Detect Ipad Users */
+@media only screen and (max-device-width: 1024px) {
+  #simulation-container {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#fpsOutput {
+  position: absolute;
+  top: .5vw;
+  left: .5vh;
+  background-color: transparent;
+  color: #888;
+  font-family: 'Function Regular';
+  font-size: 1vw;
+  z-index: 7;
+}
+
+/* Local */
+
+/* Game */
+
+.game {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+}
+
+/* Canvas */
+
+.game #game-screen {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  /**
+   * Minimum height so never is full height
+   * Avoids glitches
+   */
+  height: 83.4%;
+}
+
+/* Game Canvas */
+
+.game #game-canvas {
+  display: inline-block;
+  cursor: crosshair;
+  background: #292929;
+  opacity: 1;
+  transition: 180ms opacity;
+}
+
+/* Pause Screen */
+
+.game #pause-screen {
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 75%;
+  height: 80%;
+  background-color: inherit;
+  opacity: 0;
+  transition: 350ms opacity;
+  overflow: visible;
+}
+
+/* Close Pause Button */
+
+.game #pause-screen #close-pause {
+  position: absolute;
+  top: 1%;
+  right: 3%;
+  font-family: 'Function Regular';
+  font-size: 3vh;
+  color: #fff;
+  opacity: 1;
+  transition: 360ms opacity;
+  cursor: pointer;
+}
+
+.game #pause-screen #close-pause:hover {
+  opacity: .5;
+}
+
+/* Pause Text Container */
+
+.game #pause-screen .pause-container {
+  margin: auto;
+  position: absolute;
+  left: -5%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 80%;
+  height: 84%;
+  color: #fff;
+  opacity: 1;
+  text-align: center;
+  font-family: 'Function Regular';
+}
+
+/* Pause Header Text */
+
+.game #pause-screen .pause-text {
+  font-size: 5vh;
+}
+
+/* Pause Buttons */
+
+.game #pause-screen .pause-buttons {
+  margin-top: 3%;
+  font-size: 3vh;
+  cursor: default;
+}
+
+.game #pause-screen .pause-button {
+  display: block;
+  margin: auto;
+  margin-top: 7%;
+  width: 90%;
+  line-height: 2;
+  border-radius: 100px;
+  opacity: 1;
+  transition: 200ms opacity;
+}
+
+.game #pause-screen .pause-button:hover {
+  opacity: .9;
+  cursor: pointer;
+}
+
+.game #pause-screen .pause-button:active {
+  opacity: .67
+}
+
+/* Individual Pause Buttons */
+
+.game #pause-screen #pause-button--continue {
+  background-color: #ff1493;
+}
+
+.game #pause-screen #pause-button--restart {
+  background-color: #ffd12a;
+}
+
+.game #pause-screen #pause-button--mainmenu {
+  background-color: #11cdcd;
+}
+
+/* Pause Icons */
+
+.game #pause-screen .pause-icons {
+  margin-top: 20%;
+}
+
+.game #pause-screen .pause-icon {
+  position: relative;
+  display: inline-block;
+  margin: 3%;
+  overflow: visible;
+  width: 20%;
+  height: 0;
+  padding-top: 20%;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  opacity: 1;
+  transition: 200ms opacity;
+}
+
+.game #pause-screen .pause-icon:hover {
+  opacity: .7;
+  cursor: pointer;
+}
+
+/* Individual Pause Icons */
+
+.game #pause-screen #pause-icon--togglesound {
+  background-color: #222;
+}
+
+.game #pause-screen #pause-icon--thumbsup {
+  background-color: #555;
+}
+
+.game #pause-screen #pause-icon--noadds {
+  background-color: #333;
+}
+
+/* Background */
+
+.game #background {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #252525;
+}
+
+/* Info */
+
+.game #info {
+  position: absolute;
+  top: 0;
+  color: #dfdfdf;
+  text-shadow: 0px 2px 1px #444;
+  font-weight: 550;
+  background-color: inherit;
+}
+
+/* Info -- Coins -- Score */
+
+.game #info #hit-count, .game #info #coins, .game #info #score {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  text-align: center;
+  font-family: 'Function Regular';
+  font-size: 2vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Pause Button */
+
+.game #info #pause {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 2.7%;
+  display: block;
+  z-index: 100;
+  transition: 50ms filter linear;
+  filter: invert(0%);
+}
+
+.game #info #pause:active {
+  filter: invert(5%);
+}
+
+/* Movers That Hit Target */
+
+.game #info #hit-count {
+  width: 100%;
+  font-size: 2.5vh;
+  justify-content: center;
+  text-indent: 3%;
+}
+
+/* Coins */
+
+.game #info #coins {
+  right: 2%;
+  width: 100%;
+}
+
+.game #info #coins-image {
+  position: absolute;
+  top: 50%;
+  overflow: visible;
+}
+
+.game #coins-value {
+  position: absolute;
+  text-align: right;
+}
+
+/* Score */
+
+.game #info #score {
+  line-height: 2.5vh;
+}
+
+.game #info #score-value {
+  text-indent: 3%;
+  font-weight: bold;
+  font-size: 2.5vh;
+}
+
+/* Stats */
+
+.game #stats {
+  position: absolute;
+  bottom: 0;
+  color: #ccc;
+  text-shadow: 0px 2px 1px #444;
+  font-weight: 550;
+  background-color: inherit;
+}
+
+/* Timer */
+
+.game #stats #timer {
+  position: absolute;
+  left: -1%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-family: 'Function Regular';
+  font-size: 3vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

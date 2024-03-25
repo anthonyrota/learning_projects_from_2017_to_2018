@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mathem | Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    
+    <script src="libs/jquery.js"></script>
+    <script src="libs/mathjs.js"></script>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="toggle-modal">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <div class="function-modal">
+        <ul>
+          <li id="choice-main"><a href="#">Main</a></li>
+          <li id="choice-invtrig"><a href="#">Inv Trig</a></li>
+          <li><a href="#"></a></li>
+        </ul>
+        <ul>
+          <li id="choice-trig"><a href="#">Trig</a></li>
+          <li><a href="#">Item 2</a></li>
+          <li><a href="#">Item 3</a></li>
+        </ul>
+      </div>
+      
+      <div class="error-message">Oops! A Syntax Error was found, maybe you typed the wrong thing!</div>
+      
+      <div class="outputs">
+        <div class="previous-outputs"></div>
+        <div class="main-output">...type input here</div>
+      </div>
+      
+      <div class="inputs" id="inputs">
+        <div class="button-container numbers">
+          <div class="button-column four-items">
+            <span id="key-nine"><p>9</p></span>
+            <span id="key-six"><p>6</p></span>
+            <span id="key-three"><p>3</p></span>
+            <span id="key-dot"><p>.</p></span>
+          </div>
+          
+          <div class="button-column four-items">
+            <span id="key-eight"><p>8</p></span>
+            <span id="key-five"><p>5</p></span>
+            <span id="key-two"><p>2</p></span>
+            <span id="key-zero"><p>0</p></span>
+          </div>
+          
+          <div class="button-column four-items">
+            <span id="key-seven"><p>7</p></span>
+            <span id="key-four"><p>4</p></span>
+            <span id="key-one"><p>1</p></span>
+            <span id="key-zerozero"><p>00</p></span>
+          </div>
+        </div>
+        
+        <div class="button-container basic">
+          <div class="button-column six-items">
+            <span id="key-deleteall"><p>AC</p></span>
+            <span id="key-divide"><p>/</p></span>
+            <span id="key-multiply"><p>X</p></span>
+            <span id="key-subtract"><p>-</p></span>
+            <span id="key-add"><p>+</p></span>
+            <span id="key-calculate"><p>=</p></span>
+          </div>
+        </div>
+        
+        <div class="button-container advanced">
+          <div class="button-column five-items">
+            <span id="key-delete"><p>DEL</p></span>
+            <span id="key-left-bracket"><p>(</p></span>
+            <span id="key-right-bracket"><p>)</p></span>
+            <span id="key-plusminus"><p>+/-</p></span>
+            <span id="key-ANS"><p>ANS</p></span>
+          </div>
+          
+          <div class="button-column five-items">
+            <span id="key-log"><p>log</p></span>
+            <span id="key-pi"><p>&pi;</p></span>
+            <span id="key-e"><p>e</p></span>
+            <span id="key-power"><p>a ^ b</p></span>
+            <span id="key-sqrt"><p>sqrt</p></span>
+          </div>
+        
+          <div class="button-column five-items">
+            <span id="key-square"><p>a ^ 2</p></span>
+            <span id="key-i"><p>i</p></span>
+            <span id="key-"><p></p></span>
+            <span id="key-"><p></p></span>
+            <span id="key-"><p></p></span>
+          </div>
+        
+          <div class="button-column five-items">
+            <span id="key-"><p></p></span>
+            <span id="key-"><p></p></span>
+            <span id="key-"><p></p></span>
+            <span id="key-"><p></p></span>
+            <span id="key-"><p></p></span>
+          </div>
+        </div>
+        
+        <div class="button-container trig">
+          <div class="button-column five-items">
+            <span id="key-deg"><p><b>DEG</b></p></span>
+            <span id="key-sin"><p>sin(x)</p></span>
+            <span id="key-cos"><p>cos(x)</p></span>
+            <span id="key-tan"><p>tan(x)</p></span>
+            <span id="key-sinh"><p>sinh(x)</p></span>
+          </div>
+          
+          <div class="button-column five-items">
+            <span id="key-rad"><p><b>RAD</b></p></span>
+            <span id="key-asin"><p>asin(x)</p></span>
+            <span id="key-acos"><p>acos(x)</p></span>
+            <span id="key-atan"><p>atan(x)</p></span>
+            <span id="key-cosh"><p>cosh(x)</p></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="js/button-anim.js"></script>
+    <script src="js/namespace.js"></script>
+    <script src="js/calculation.js"></script>
+    <script src="js/keys.js"></script>
+    <script src="js/inputs.js"></script>
+    <script src="js/angles.js"></script>
+    <script src="js/mathem.js"></script>
+  </body>
+</html>

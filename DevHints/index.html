@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DevHints | Home</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="/libs/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/loader.css">
+  </head>
+  <body>
+    <div class="loader">Loading...</div>
+    
+    <div class="wrapper-hide-all" style="display: none;">
+      <header class="webpage-header container"></header>
+      
+      <div class="webcontent-container">
+        <section class="main-showcase container">
+          <img src="/assets/dev-showcase-image.jpg" alt="Dev Program Showcase">
+          <div class="main-showcase--left">
+            <h1>Learn all You<br>Need About the Web</h1>
+            <h2>We Showcase the Tricks of the Trade</h2>
+            <a href="#" class="button primary-button">Start Learning Now</a>
+          </div>
+        </section>
+        
+        <section class="brief-description">
+          <div class="showcase-card">
+            <i class="icon-red fa fa-desktop fa-3x"></i>
+            <div>
+              <h3>Tutorials Made for all platforms</h3>
+              <p>Multi-platform accessability is our priority! We make sure that all our tutorials are accessable no matter what platform</p>
+            </div>
+          </div>
+          
+          <div class="showcase-card">
+            <i class="icon-orange fa fa-credit-card fa-3x"></i>
+            <div>
+              <h3>Free Online Tutorials</h3>
+              <p>This website is 100% free to use and see. That means that all the tutorials that we post are free for you to learn from!</p>
+            </div>
+          </div>
+          
+          <div class="showcase-card">
+            <i class="icon-blue fa fa-line-chart fa-3x"></i>
+            <div>
+              <h3>Learn HTML, CSS and Javascript Online</h3>
+              <p>Our tutorials are guarrunteed to teach you something new. Join the journey today and we will aid your web development careear</p>
+            </div>
+          </div>
+          
+          <div class="showcase-card">
+            <i class="icon-purple fa fa-magic fa-3x"></i>
+            <div>
+              <h3>Our tutorials are like magic!</h3>
+              <p>Many have said that our tutorials are at the top of the chain, and are the best of their kind. We reinforce intuition and teach you the very best</p>
+            </div>
+          </div>
+        </section>
+        
+        <section class="showcase-guide">
+          <h2>Learning for <a href="/pages/getstarted.html"><u>FREE</u></a> is as Simple as it Gets!</h2>
+          
+          <div class="simple-guide-card">
+            <div class="icon-round icon-round-green"><i class="fa fa-search fa-4x"></i></div>
+            <div class="simple-guide-info">
+              <h3>1. Choose a Tutorial</h3>
+              <p>Our tutorials significantly vary and cover a wide range of topics, as well as the three fundamental web languages, HTML5, CSS3 and Javascript</p>
+            </div>
+          </div>
+          
+          <div class="simple-guide-card">
+            <div class="icon-round icon-round-blue"><i class="fa fa-book fa-4x"></i></div>
+            <div class="simple-guide-info">
+              <h3>2. Learn From Our Website</h3>
+              <p>Once you have chosen a satisfactory tutorial, our many courses will teach you the best of that section, allowing you to learn all the tricks of the trade</p>
+            </div>
+          </div>
+          
+          <div class="simple-guide-card">
+            <div class="icon-round icon-round-yellow"><i class="fa fa-graduation-cap fa-4x"></i></div>
+            <div class="simple-guide-info">
+              <h3>3. Put it Into Practice!</h3>
+              <p>After you've learnt the best from us, it's as easy as trying it out yourself. Be confident with your ability and experiment wherever you can</p>
+            </div>
+          </div>
+        </section>
+        
+        <section class="about-content-container"></section>
+        
+        <section class="start-learning-container">
+          <a href="#" class="button primary-button start-learning-button">Start Learning Now</a>
+        </section>
+        
+        <footer class="webpage-footer container"></footer>
+      </div>
+    </div>
+    
+    <script src="/libs/jquery.js"></script>
+    <script src="/libs/scroll-reveal.js"></script>
+    <script src="/js/load-elements.js"></script>
+    <script>
+      $(function() {
+        Devhints.loadElements([
+          ['.webpage-header', '/components/header/header.html'],
+          ['.webpage-footer', '/components/footer/footer.html'],
+          ['.about-content-container', '/components/about/about.html']
+        ], () => {
+          $('.loader').hide();
+          $('.webpage-header, .webcontent-container').hide().fadeIn(400);
+          $('.wrapper-hide-all').show();
+          
+          window.sr = ScrollReveal();
+          
+          sr.reveal('.showcase-card', {
+            origin: 'bottom',
+            duration: 500,
+            distance: '20px',
+            delay: 100,
+            viewFactor: 0.65
+          });
+          
+          sr.reveal('.showcase-guide > h2', {
+            origin: 'right',
+            duration: 1250,
+            distance: '70px',
+            delay: 125,
+            viewFactor: 0.4
+          })
+          
+          sr.reveal('.simple-guide-card', {
+            origin: 'left',
+            duration: 1000,
+            distance: '50px',
+            delay: 200,
+            viewFactor: 0.5
+          }, 50);
+          
+          sr.reveal('.start-learning-container', {
+            origin: 'bottom',
+            duration: 1200,
+            distance: '30px',
+            delay: 120,
+            viewFactor: 0.4
+          });
+          
+          Devhints.aboutHTMLModules.bindRevealJS(sr);
+        }, 250);
+      });
+    </script>
+  </body>
+</html>

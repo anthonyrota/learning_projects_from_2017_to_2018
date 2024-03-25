@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DevHints | Featured</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    
+    <link rel="stylesheet" type="text/css" href="/libs/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/featured.css">
+  </head>
+  <body>
+    <header class="webpage-header blue container"></header>
+    
+    <div class="webcontent-container">
+      <div class="top-info">
+        <h1>We offer a wide range of tutorials suited to your liking</h1>
+        <h3>Swipe through to see some of them and choose one!</h3>
+      </div>
+      <section class="image-slides">
+        <img class="slide-image" src="/assets/weblearning.png" alt="Showcase Image">
+        <img class="slide-image" src="/assets/css3.png" alt="Showcase Image">
+        <img class="slide-image" src="/assets/webshowcase.png" alt="Showcase Image">
+        <img class="slide-image" src="/assets/html5.png" style="transform: scale(0.5);" alt="Showcase Image">
+        <img class="slide-image" src="/assets/htmlcssjslogo.png" alt="Showcase Image">
+        <img class="slide-image" src="/assets/javascriptlogo.png" alt="Showcase Image">
+      
+        <button class="button-left"><i class="fa fa-arrow-left"></i></button>
+        <button class="button-right"><i class="fa fa-arrow-right"></i></button>
+      </section>
+      
+      <section class="start-learning-container">
+        <a href="#" class="button primary-button start-learning-button">Start Learning Now</a>
+      </section>
+      
+      <footer class="webpage-footer container"></footer>
+    </div>
+    
+    <script src="/libs/jquery.js"></script>
+    <script>$(function(){$('.webpage-header').load('/components/header/header.html');$('.webpage-footer').load('/components/footer/footer.html');});</script>
+    
+    <script>
+      $(function() {
+        const slides = document.getElementsByClassName('slide-image');
+        let current = 0;
+        let updateSlides;
+        
+        $('.button-left').click(() => updateSlides(-1));
+        $('.button-right').click(() => updateSlides(1));
+        
+        updateSlides = function(n) {
+          current += n;
+          if (current >= slides.length) {
+            current = 0;
+          } else if (current < 0) current = slides.length - 1;
+          
+          for (let i = 0; i < slides.length; i++) {
+            slides[i].style.opacity = '0';
+          }
+          
+          slides[current].style.opacity = '1';
+        };
+        
+        $(document).keydown(function(e) {
+          switch (e.which) {
+            case 37: // left
+            case 65:
+              updateSlides(-1);
+              break;
+    
+            case 39: // down
+            case 68:
+              updateSlides(1);
+              break;
+          }
+        });
+        
+        let x=0,y=0,l=Math.abs;$('.slide-image').on('touchstart',function(a){x=a.touches[0].clientX;y=a.touches[0].clientY}).on('touchmove',function(a){if(x&&y){let b=x-a.touches[0].clientX;l(b)>l(y-a.touches[0].clientY)&&(0<b?updateSlides(-1):updateSlides(1));y=x=0}});
+      });
+    </script>
+  </body>
+</html>

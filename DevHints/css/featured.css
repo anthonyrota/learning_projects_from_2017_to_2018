@@ -1,0 +1,132 @@
+.top-info {
+  width: 100vw;
+  height: 200px;
+  background: #F5FFFF;
+  border-bottom: 1px solid #C8FFFF;
+  text-align: center;
+}
+
+.top-info h1 {
+  padding-top: 65px;
+  color: #222222;
+  font-size: 29px;
+  font-weight: 500;
+}
+
+.top-info h3 {
+  margin-top: 20px;
+  color: #666;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.image-slides {
+  margin-top: 50px;
+  width: 100vw;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-slides img {
+  max-height: 500px;
+  max-width: 80vw;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: .4s ease-out;
+}
+
+.image-slides img:nth-child(1) {
+  opacity: 1;
+}
+
+.image-slides .button-left,
+.image-slides .button-right {
+  height: 40px;
+  width: 25px;
+  background: transparent;
+  border: none;
+  color: #262626;
+  font-size: 20px;
+  margin: auto;
+  position: absolute;
+  line-height: 500px;
+  cursor: pointer;
+}
+
+.image-slides .button-left {
+  left: 20px;
+}
+
+.image-slides .button-right {
+  right: 30px;
+}
+
+.image-slides .button-right {
+  
+}
+
+.start-learning-container {
+  width: 100vw;
+  height: 60px;
+  padding: 70px 0 140px 0;
+  background: #FEFEFE;
+}
+
+.start-learning-button {
+  display: inline-block;
+  margin: auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.simple-steps ul li img.correct {
+  margin-left: 7%;
+}
+
+@media screen and (max-width: 680px) {
+  .top-info {
+    width: 100vw;
+    padding: 0 5vw;
+    height: 250px;
+  }
+  
+  .top-info h1 {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 676px) {
+  .image-slides {
+    height: 200px;
+  }
+  
+  .image-slides img {
+    max-height: 200px;
+  }
+  
+  .image-slides .button-left,
+  .image-slides .button-right {
+    line-height: 200px;
+  }
+  
+  .image-slides .button-left {
+    left: 0;
+  }
+  
+  .image-slides .button-right {
+    right: 5px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .start-learning-container {
+    padding: 40px 0 110px 0;
+  }
+}

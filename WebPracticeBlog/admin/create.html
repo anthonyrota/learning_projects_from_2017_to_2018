@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WebDesignBlog | Home</title>
+    
+    <link rel="stylesheet" type="text/css" href="/libs/highlight/styles/github-gist.css">
+    <link rel="stylesheet" type="text/css" href="/css/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+  </head>
+  <body class="admin-page">
+    <section class="admin-container write-new-post site-section write-new-post-json-container">
+      <div class="site-section-container container container-blog-size">
+        <div class="site-section-child admin-json-upload-child">
+          <div class="site-form-input-group align-center text-align-center">
+            <label>Create Post From JSON File</label>
+            <label class="button button-block bg-secondary site-form-input-group-not-label">
+              Upload JSON
+              <input type="file" accept=".json" class="write-post-upload-json">
+            </label>
+          </div>
+          <br><br>
+          <div class="site-form-input-group align-center text-align-center admin-json-upload-child-save-as">
+            <label>Save Post As JSON</label>
+            <input type="text" value="filename.json" class="button button-block button-not-button write-post-download-json-file-name">
+            <button class="button button-block bg-secondary site-form-input-group-not-label write-post-download-json">
+              Download JSON
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="admin-container write-new-post site-section site-section-small">
+      <div class="site-section-container container container-blog-size">
+        <div class="site-section-child align-center">
+          <div class="site-form-input-group">
+            <label>Your Post's Title</label>
+            <input type="text" class="write-post-title" value="Write Your Post's Title Here...">
+          </div>
+          <br><br>
+          <div class="site-form-input-group">
+            <label>Your Post's Image</label>
+            <br>
+            <label class="button bg-accent site-form-input-group-not-label">
+              Upload Your Image
+              <input type="file" accept="image/*" class="write-post-image-input">
+            </label>
+            <br><br>
+            <canvas class="write-post-image-preview block"></canvas>
+          </div>
+          <br><br>
+          <div class="site-form-input-group">
+            <label>Your Post's Caption</label>
+            <input type="text" class="write-post-caption" value="Write Your Post's Caption Here...">
+          </div>
+          <br><br>
+          <div class="site-form-input-group">
+            <label>Your Post's Content</label>
+            <textarea class="write-post-content">Write Your Post's Content Here...</textarea>
+          </div>
+          <button class="button button-block bg-secondary write-post-preview">Preview</button>
+        </div>
+      </div>
+    </section>
+    
+    <section class="admin-container write-new-post site-blog-container">
+      <div class="site-blog-image-caption"></div>
+      <img class="site-blog-image">
+      
+      <section class="site-section open-sans">
+        <div class="container site-section-container">
+          <div class="site-section-child align-center">
+            <div class="text-align-center site-blog-info">
+              <div class="site-loader">Loading...</div>
+              <div class="site-brand-title site-blog-title"></div>
+              <div class="site-blog-description"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <div class="site-blog-content"></div>
+    </section>
+    
+    <section class="admin-container write-new-post site-section">
+      <div class="site-section-container">
+        <div class="site-section-child align-center">
+          <h1 class="mg-none">Are You Done? Then Consider This.</h1>
+          <p class="add-this-post-to-the-server">Add This Post To The Server</p>
+          <div class="text-warning write-post-push-to-server-warning"></div>
+          <br>
+          <button class="button button-block bg-secondary write-post-push-to-server">Push To Server</button>
+        </div>
+      </div>
+    </section>
+    
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="/libs/highlight/highlight.pack.js"></script>
+    <script src="/libs/jquery.js"></script>
+    <script src="/libs/marked.js"></script>
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.7/download.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.all.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+    <script type="module" src="/js/admin/admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WebDesignBlog | Home</title>
+    
+    <link rel="stylesheet" type="text/css" href="libs/highlight/styles/vs.css">
+    <link rel="stylesheet" type="text/css" href="css/site.css">
+  </head>
+  <body>
+    <section class="site-section site-user-loading-section">
+      <div class="container site-section-container">
+        <div class="site-section-child align-center">
+          <div class="site-loader"></div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="site-section site-section-edit-form">
+      <div class="container site-section-container site-section-container-collapse-large">
+        <div class="site-section-child align-center">
+          <h1 class="site-brand-title">Your Username</h1>
+          <h1 class="site-user-name"></h1>
+        </div>
+        <div class="site-section-child">
+          <form class="site-form site-form-edit-username box-shadow">
+            <div class="site-form-header bg-dark">
+              Change Username
+            </div>
+            <div class="site-form-content">
+              <div class="site-form-input-group">
+                <label>First Name</label>
+                <div class="text-warning site-form-edit-first-name-error"></div>
+                <input type="text" class="site-form-edit-username-first-name">
+              </div>
+              <div class="site-form-input-group">
+                <label>Last Name</label>
+                <div class="text-warning site-form-edit-last-name-error"></div>
+                <input type="text" class="site-form-edit-username-last-name">
+              </div>
+              <input type="submit" href="#" class="button button-block button-full bg-secondary" value="Change Username">
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    <section class="site-section site-section-edit-form">
+      <div class="container site-section-container site-section-container-collapse-large">
+        <div class="site-section-child align-center text-align-center">
+          <h1 class="site-brand-title">Your Profile Image</h1>
+          <img class="site-user-profile-image">
+        </div>
+        <div class="site-section-child align-center text-align-center">
+          <h1 class="site-brand-title">Don't Like It? Change It.</h1>
+          <label class="button button-block bg-primary">
+            Upload New Profile Image
+            <div class="text-warning site-form-input-user-photo-error"></div>
+            <input type="file" accept="image/*" class="site-form-input-user-photo">
+          </label>
+        </div>
+      </div>
+    </section>
+    
+    <section class="site-section site-section-edit-form">
+      <div class="container container-small site-section-container">
+        <div class="site-section-child align-center text-align-center">
+          <h3 class="text-warning">Warning. This Will Delete All Of Your Comments And User Info. You Will Not Be Able To Get It Back</h3>
+          <br>
+          <button class="button button-block button-warning site-form-delete-user-account-trigger">Delete Account</button>
+        </div>
+      </div>
+    </section>
+    
+    <section class="site-modal site-section-edit-form site-section-edit-form-validate-password">
+      <div class="site-modal-content site-form-modal-content">
+        <div class="site-form">
+          <div class="site-form-header bg-dark">
+            Confirm Your Password Before Deleting Your Account
+          </div>
+          <div class="site-form-content text-align-center">
+            <div class="site-form-input-group">
+              <label>Password</label>
+              <div class="text-warning site-form-delete-account-validate-password-error"></div>
+              <input type="password" class="site-form-delete-account-validate-password-input">
+            </div>
+            <br>
+            <input type="submit" href="#" class="button button-block button-warning site-form-delete-account-validate-password-submit" value="Delete Account">
+            <br><br>
+            <div class="text-warning">Are You Sure You Want To Delete Your Account? All Your Comments And User Info Will Be Deleted. You Will Not Be Able To Get It Back.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+    <script src="libs/jquery.js"></script>
+    <script type="module" src="js/pages/user.js"></script>
+  </body>
+</html>

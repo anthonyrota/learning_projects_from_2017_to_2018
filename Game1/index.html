@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="main.css">
+<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Inknut+Antiqua|Lato|Merriweather" rel="stylesheet">
+
+</head>
+
+<body>
+    
+<canvas id="canvas"></canvas>
+
+<div class="header-text">
+  <div class="start-screen-text">
+    <p id="start-screen-header">Endless <br>Destiny</p>
+  </div>
+</div>
+
+<div class="button-container">
+  <div class="start-screen-buttons">
+    <a class="button" id="start-game" href="#">Start!</a>
+    <a class="button" id="shop" href="#">Shop</a>
+    <a class="button" id="options" href="#">Options</a>
+    <a class="button" id="credits" href="#">Credits</a>
+    <a class="button" id="about" href="#">About</a>
+    <a class="button" id="scores" href="#">Scores</a>
+    <a class="button" id="togglesound" href="#">
+      <img id="soundtoggle" src="#">
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="loader" id="container-loader">
+    <div class="progress-bar" id="container-progress-bar">
+      <div class="progress-stripes" id="container-progress-stripes">/</div>
+      <div class="percentage" id="container-percentage">0%</div>
+    </div>
+  </div>
+  <span class="textload" id="loadtext">Loading...</span>
+</div>
+
+<div class="loading-game">
+  <div class="loader" id="loading-game-loader">
+    <div class="progress-bar" id="loading-game-progress-bar">
+      <div class="progress-stripes" id="loading-game-progress-stripes">/</div>
+      <div class="percentage" id="loading-game-percentage">0%</div>
+    </div>
+  </div>
+  <span class="textload" id="load-game-text">Loading...</span>
+</div>
+
+<script src="options.js"></script>
+<script src="background.js"></script>
+<script src="images.js"></script>
+<script src="elements.js"></script>
+<script src="loadingscreen.js"></script>
+<script src="controls.js"></script>
+<script src="tiles.js"></script>
+<script src="newcharacter.js"></script>
+<script src="collision.js"></script>
+<script src="hitboxes.js"></script>
+<script src="game.js"></script>
+
+</body>
+</html>

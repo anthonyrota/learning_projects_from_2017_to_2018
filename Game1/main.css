@@ -1,0 +1,248 @@
+html, body {
+  padding:0;
+  margin:0;
+  overflow: hidden;
+}
+
+canvas {
+  background-color: #e7e7e7;
+  display: block;
+}
+
+.container {
+  text-align: center;
+  width: 70%;
+  height: 35px;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.loading-game {
+  text-align: center;
+  width: 70%;
+  height: 35px;
+  position: absolute;
+  right: 0;
+  bottom: 10vh;
+  left: 0;
+  margin: auto;
+}
+
+.loader {
+  width: inherit;
+  height: 25px;
+  border-radius: 14px;
+  border-top: 1px solid #999;
+  background: #ccc;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+}
+
+#container-loader {
+  box-shadow: 0px 4px 0px #D73535, 0px 3px 15px rgba(0,0,0,0.4);
+}
+
+#loading-game-loader {
+  box-shadow: 0px 4px 0px #4478fd, 0px 3px 15px rgba(0,0,0,0.4);
+}
+
+.progress-bar {
+  height: inherit;
+  width: 0;
+  border-radius: inherit;
+  position: relative;
+  overflow: hidden;
+}
+
+#container-progress-bar {
+  background: #e74c3c;
+}
+
+#loading-game-progress-bar {
+  background: #3498db;
+}
+
+.percentage {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #eee;
+}
+
+.progress-stripes{
+  width: inherit;
+  height: inherit;
+  font-size: 180px;
+  font-weight: bold;
+  margin-top: -50px;
+  letter-spacing: -14px;
+}
+
+#container-progress-stripes {
+  color: #c0392b;
+}
+
+#loading-game-progress-stripes {
+  color: #2980b9;
+}
+
+.textload {
+  margin: auto;
+  position: relative;
+  top: 15px;
+  color: #888;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.button-container {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  position: relative;
+  color: rgba(255,255,255,1);
+  text-decoration: none;
+  font-family: 'Yanone Kaffeesatz';
+  font-weight: 700;
+  font-size: 7vh;
+  display: block;
+  padding: 4px;
+  border-radius: 8px;
+	width: 14vw;
+	height: 7vh;
+	text-align: center;
+	transition: all .1s ease;
+}
+
+#options, #start-game, #shop, #scores,  #credits, #about, #togglesound {
+  margin: auto;
+  position: absolute;
+}
+
+#options {
+  left: 8vh;
+  top: 8vh;
+  background-color: #586261;
+  box-shadow: 0px 9px 0px #433F40, 0px 9px 25px rgba(0,0,0,.7);
+}
+
+#options:active {
+  top: 9vh;
+  box-shadow: 0px 3px 0px #433F40, 0px 3px 6px rgba(0,0,0,.9);
+}
+
+#start-game {
+  bottom: 13vh;
+  left: 43vw;
+  background-color: #FF7400;
+  box-shadow: 0px 9px 0px #FF4D00, 0px 9px 25px rgba(0,0,0,.7);
+}
+
+#start-game:active {
+  bottom: 12vh;
+  box-shadow: 0px 3px 0px #FF4D00, 0px 3px 6px rgba(0,0,0,.9);
+}
+
+#shop {
+  right: 10vh;
+  bottom: 36vh;
+  background-color: #009BD6;
+  box-shadow: 0px 9px 0px #00719C, 0px 9px 25px rgba(0,0,0,.7);
+}
+
+#shop:active {
+  bottom: 35vh;
+  box-shadow: 0px 3px 0px #00719C, 0px 3px 6px rgba(0,0,0,.9);
+}
+
+#scores {
+  right: 10vh;
+  bottom: 25vh;
+  background-color: #00415A;
+  box-shadow: 0px 9px 0px #001F2B, 0px 9px 25px rgba(0,0,0,.7);
+}
+
+#scores:active {
+  bottom: 24vh;
+  box-shadow: 0px 3px 0px #001F2B, 0px 3px 6px rgba(0,0,0,.9);
+}
+
+#credits {
+  right: 10vh;
+  bottom: 14vh;
+  background-color: #94075C;
+  box-shadow: 0px 9px 0px #660C42, 0px 9px 25px rgba(0,0,0,.7);
+}
+
+#credits:active {
+  bottom: 13vh;
+  box-shadow: 0px 3px 0px #660C42, 0px 3px 6px rgba(0,0,0,.9);
+}
+
+#about {
+  right: 10vh;
+  bottom: 3vh;
+  background-color: #FC1987;
+  box-shadow: 0px 9px 0px #CC146D, 0px 9px 25px rgba(0,0,0,.7);
+}
+
+#about:active {
+  bottom: 2vh;
+  box-shadow: 0px 3px 0px #CC146D, 0px 3px 6px rgba(0,0,0,.9);
+}
+
+#togglesound, #soundtoggle {
+  left: 10vh;
+  bottom: 5vh;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 10vh;
+  background-color: rgba(219,87,5,1);
+  box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+}
+
+#togglesound:active {
+  bottom: 4vh;
+  box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+}
+
+.header-text {
+  text-align: center;
+  font-family: 'Yanone Kaffeesatz';
+  font-weight: 700;
+  font-size: 10em;
+  font-size: 17vh;
+  color: #FF6200;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  7px 4px 0 #222;
+  margin: auto;
+}
+
+.start-screen-text {
+  position: absolute;
+  margin: auto;
+  top: -15%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}

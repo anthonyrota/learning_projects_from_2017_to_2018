@@ -1,0 +1,28 @@
+.copyright-footer {
+  height: 70px;
+  width: 100%;
+  background: #2E2E2E;
+  /*position: absolute;*/
+  /*bottom: 0;*/
+}
+
+.copyright-footer p {
+  text-align: center;
+  color: #FFFFFF;
+  line-height: 67px;
+}
+
+.copyright-footer p a {
+  color: #CCCCCF;
+  text-decoration: none;
+}
+
+.copyright-footer p a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 450px) {
+  .copyright-footer p {
+    font-size: 3.4vw;
+  }
+}

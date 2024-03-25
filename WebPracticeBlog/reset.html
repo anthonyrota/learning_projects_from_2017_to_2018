@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WebDesignBlog | Home</title>
+
+    <link rel="stylesheet" type="text/css" href="libs/highlight/styles/vs.css">
+    <link rel="stylesheet" type="text/css" href="css/site.css">
+  </head>
+  <body>
+    <section class="site-section">
+      <div class="container site-section-container">
+        <div class="site-section-child align-center">
+          <form class="site-form site-form-reset-password box-shadow">
+            <div class="site-form-header bg-dark">
+              Reset Your Password
+            </div>
+            <div class="site-form-content">
+              <div class="site-form-input-group">
+                <label>Email Address</label>
+              <div class="text-warning site-form-reset-password-error"></div>
+                <input type="email" class="site-form-reset-password-email">
+              </div>
+              <input type="submit" href="#" class="button button-block button-full bg-secondary" value="Reset Password">
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+    <script src="libs/jquery.js"></script>
+    <script type="module" src="js/pages/password-reset.js"></script>
+  </body>
+</html>

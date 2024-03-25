@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DevHints | Javascript Playground</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    
+    <link rel="stylesheet" type="text/css" href="/playground/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/libs/highlight/styles/tomorrow-night.css">
+  </head>
+  <body>
+    <div class="code-instructions">
+      <div class="instructions-title"></div>
+      <div class="instructions-summary"></div>
+      <div class="main-instructions"></div>
+    </div>
+    
+    <div class="code-wrapper">
+      <div class="resize-instructions"></div>
+      
+      <div class="code-container">
+        <div class="code-area html">
+          <h3 class="no-highlight">HTML</h3>
+          <div class="code-input" id="html-code"></div>
+          <div class="code-bar no-highlight" id="html-bar"></div>
+        </div>
+        
+        <div class="code-area css">
+          <h3 class="no-highlight">CSS</h3>
+          <div class="code-input" id="css-code"></div>
+          <div class="code-bar no-highlight" id="css-bar"></div>
+        </div>
+        
+        <div class="code-area js">
+          <h3 class="no-highlight">Javascript</h3>
+          <div class="code-input" id="javascript-code"></div>
+          <div class="code-bar no-highlight" id="javascript-bar"></div>
+        </div>
+        
+        <div class="resize-editor"></div>
+      </div>
+      
+      <iframe class="code-output"></iframe>
+    </div>
+    
+    <script src="/libs/highlight/highlight.pack.js"></script>
+    <script src="/playground/libs/emmet.js"></script>
+    <script src="/playground/libs/ace-builds-master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/playground/libs/ace-builds-master/src-noconflict/ext-emmet.js"></script>
+    <script src="/libs/jquery.js"></script>
+    
+    <script src="/playground/js/dom.js"></script>
+    <script src="/playground/js/options.js"></script>
+    <script src="/playground/js/editors.js"></script>
+    <script src="/playground/js/utils.js"></script>
+    <script src="/playground/js/events.js"></script>
+    <script src="/playground/js/main.js"></script>
+  </body>
+</html>

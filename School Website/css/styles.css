@@ -1,0 +1,486 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url("/fonts/OpenSans/OpenSans-Regular.eot?v=1.1.0");
+  src: url("/fonts/OpenSans/OpenSans-Regular.eot?#iefix&v=1.1.0") format("embedded-opentype"),
+       url("/fonts/OpenSans/OpenSans-Regular.woff2?v=1.1.0") format("woff2"),
+       url("/fonts/OpenSans/OpenSans-Regular.woff?v=1.1.0") format("woff"),
+       url("/fonts/OpenSans/OpenSans-Regular.ttf?v=1.1.0") format("truetype"),
+       url("/fonts/OpenSans/OpenSans-Regular.svg?v=1.1.0#Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Global */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.button {
+  color: #FEFEFE;
+  text-decoration: none;
+  padding: 10px 20px;
+  background: #3498db;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.button:hover {
+  opacity: .9;
+}
+
+/* Website Container */
+.website {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: .4s right ease-in-out;
+  min-height: 100vh;
+}
+
+.website.open-for-sidebar {
+  right: 200px;
+}
+
+/* Page Header */
+.main-header {
+  width: 100vw;
+  height: 100px;
+  background: #2ecc71;
+  color: #FEFEFE;
+  position: relative;
+  padding: 0 8vw;
+  box-shadow: 0 0 3px #000;
+}
+
+/* Header Title */
+.main-header .title {
+  float: left;
+  position: absolute;
+}
+
+.main-header .title h1 {
+  font-size: 30px;
+  font-weight: 200;
+  margin: 0;
+  margin-top: 14px;
+}
+
+.main-header .title h2 {
+  margin: 0;
+  font-weight: 200;
+  font-size: 20px;
+}
+
+/* Header Nav */
+.main-header nav {
+  float: right;
+  position: absolute;
+  right: 9.5%;
+  font-size: 16px;
+}
+
+.main-header nav > ul > li {
+  list-style: none;
+  display: inline-block;
+  margin: 23px 5px;
+}
+
+.main-header nav > ul > li > a,
+.main-header nav > ul > li > label > a {
+  text-decoration: none;
+  color: #FEFEFE;
+}
+
+.main-header nav > ul > li > a:hover,
+.main-header nav > ul > li > label > a {
+  text-decoration: none;
+  color: #DEDEDE;
+}
+
+/* Toggle Header Button */
+.main-header .toggle {
+  z-index: 999999;
+  display: block;
+  width: 35px;
+  height: 35px;
+  margin: auto;
+  position: absolute;
+  right: 2%;
+  top: -7.5px;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.main-header .toggle span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 1px;
+  margin: 7px 0;
+  background: #F2F2F2;
+  transition: .2s ease-out;
+}
+
+/* Highlight Text */
+.main-header .title span {
+  font-weight: bold;
+}
+
+/* Fixed Header */
+.main-header.fixed {
+  position: fixed;
+  height: 70px;
+  top: -80px;
+  right: 0;
+  z-index: 9999999;
+  transition: .4s top ease-in-out, .4s right ease-in-out;
+}
+
+.main-header.fixed.active {
+  top: 0;
+}
+
+.main-header.fixed.open-for-sidebar {
+  right: 200px;
+}
+
+.main-header.fixed .title h1 {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 70px;
+}
+
+.main-header.fixed .title h2 {
+  display: none !important;
+}
+
+.main-header.fixed nav {
+  margin-top: -15px !important;
+}
+
+/* Navigation Sidebar */
+.nav-sidebar {
+  position: fixed;
+  top: 0;
+  right: -200px;
+  height: 100vh;
+  width: 200px;
+  z-index: 99999999;
+  background: #2c3e50;
+  transition: .4s right ease-in-out;
+  overflow: scroll;
+}
+
+.nav-sidebar.open-for-sidebar {
+  right: 0;
+}
+
+.nav-sidebar > ul {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  background: #2c3e50;
+}
+
+.nav-sidebar > ul > li {
+  display: block;
+  list-style: none;
+  padding-left: 30px;
+  background: #2c3e50;
+}
+
+.nav-sidebar > ul > li:hover {
+  background: #334657;
+}
+
+.nav-sidebar > ul > li:hover > a,
+.nav-sidebar > ul > li > label {
+  color: #9caec0;
+}
+
+.nav-sidebar > ul > li > a,
+.nav-sidebar > ul > li > label {
+  text-decoration: none;
+  color: #7c8ea0;
+  line-height: 40px;
+}
+
+/* Dropdown Link */
+.dropdown-hover {
+  position: relative;
+}
+
+.dropdown-hover:before {
+  position: relative;
+  display: inline-block;
+  content: "\25B8";
+  transition: .1s ease-in-out;
+}
+
+.dropdown-hover:hover:before {
+  transform: rotate(90deg);
+  top: 2px;
+}
+
+.dropdown-hover ul {
+  background: #e67e22;
+  position: absolute;
+  left: -50px;
+  margin: 0;
+  padding: 10px 0 10px 0;
+  /*background: transparent;*/
+  border-top: #2ecc71 solid 20px;
+  display: none;
+  overflow: hidden;
+  z-index: 99;
+}
+
+/* Adjust one of them to center it */
+#curriculum-dropdown ul { left: -40px; }
+
+.dropdown-hover:hover ul {
+  display: block;
+  overflow: visible;
+  animation: .7s expandHeight;
+}
+
+.dropdown-hover:hover ul:after {
+  display: block;
+}
+
+@keyframes expandHeight {
+    0% { max-height: 0;
+         overflow: hidden;  }
+   70% { overflow: visible; }
+  100% { max-height: 700px;
+         overflow: visible; }
+}
+
+.dropdown-hover ul:after {
+  display: none;
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+  top: -15px;
+  width: 0;
+  height: 0;
+  content: '';
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #e67e22;
+}
+
+.dropdown-hover ul li {
+  display: block;
+  list-style: none;
+  margin: 0;
+  margin-top: -10px;
+  padding: 5px 30px;
+  cursor: pointer;
+  min-width: 180px;
+  /*background: #e67e22;*/
+}
+
+.dropdown-hover ul li:first-child {
+  padding-top: 12px;
+}
+
+.dropdown-hover ul li:last-child {
+  padding-bottom: 12px;
+}
+
+.dropdown-hover ul li a {
+  text-decoration: none;
+  color: #EEEEEE;
+}
+
+.dropdown-hover ul li:hover {
+  opacity: 0.98;
+}
+
+.dropdown-hover ul li:hover a {
+  color: #FFFFFF;
+}
+
+/* Dropdown Link for Sidebar */
+.dropdown-click {
+  position: relative;
+}
+
+.dropdown-click > label {
+  user-select: none;
+}
+
+.dropdown-click > input {
+  display: none;
+  user-select: none;
+}
+
+.dropdown-click label:before {
+  color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  margin-left: -15px;
+  margin-right: 8px;
+  display: inline-block;
+  content: "\25B8";
+  transition: .1s ease-in-out;
+}
+
+.dropdown-click input:checked ~ label:before {
+  transform: rotate(90deg);
+  top: 2px;
+}
+
+.dropdown-click ul {
+  margin: 0;
+  padding: 0;
+  display: none;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+.dropdown-click > input:checked ~ ul {
+  display: block;
+  animation: .8s expandHeight;
+}
+
+.dropdown-click ul li {
+  list-style: none;
+  margin: 0;
+  margin-left: 5px;
+  padding: 5px;
+}
+
+.dropdown-click ul li a {
+  color: #DDD;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-header .title h1 {
+    font-size: 26px;
+  }
+  
+  .main-header .title h2 {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .main-header {
+    padding: 0 6vw;
+  }
+  
+  .main-header:not(.fixed) > .title {
+    width: 84%;
+    text-align: center;
+  }
+  
+  .main-header.fixed nav {
+    display: none;
+  }
+  
+  .main-header .title h2 {
+    display: none;
+  }
+  
+  .main-header nav {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 90%;
+  }
+  
+  .dropdown-hover ul {
+    top: 27px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .main-header {
+    height: 110px;
+  }
+  
+  .main-header:not(.fixed) > .title {
+    margin-left: -10px;
+    margin-top: 10px;
+  }
+  
+  .main-header .title h1 {
+    font-size: 24px;
+  }
+  
+  .main-header nav {
+    margin-top: 24px;
+    font-size: 15px;
+    left: -10px;
+  }
+  
+  .dropdown-hover ul {
+    margin-top: -5px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main-header {
+    height: 90px;
+  }
+  
+  .main-header:not(.fixed) > .title {
+    margin-top: 2px;
+  }
+  
+  .main-header .title h2 {
+    display: block;
+    font-size: 16px;
+  }
+  
+  .main-header nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 396px) {
+  .main-header:not(.fixed) > .title {
+    margin-top: 8px;
+  }
+  
+  .main-header .title h1 {
+    font-size: 21px;
+  }
+  
+  .main-header .title h2 {
+    display: block;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 356px) {
+  .main-header .title h1 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .main-header .title h1 {
+    font-size: 19px;
+  }
+  
+  .main-header .title h2 {
+    font-size: 13px;
+  }
+}

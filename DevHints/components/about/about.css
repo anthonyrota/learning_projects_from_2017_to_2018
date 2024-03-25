@@ -1,0 +1,173 @@
+.simple-steps {
+  background: #FEFEFE;
+  font-family: "Roboto";
+  margin-left: 15%;
+  width: 70vw;
+}
+
+.simple-steps .main-heading-container {
+  margin-left: -15vw;
+  width: 100vw;
+  height: 200px;
+  background: #F5FFFF;
+  border-bottom: 1px solid #C8FFFF;
+  text-align: center;
+}
+
+.simple-steps .main-heading-container h1 {
+  padding-top: 65px;
+  color: #222222;
+  font-size: 29px;
+  font-weight: 500;
+}
+
+.simple-steps .main-heading-container h3 {
+  margin-top: 20px;
+  color: #666;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.simple-steps ul {
+  width: 100%;
+  margin: 40px 0 80px 0;
+  list-style: none;
+}
+
+.simple-steps ul li {
+  margin: auto;
+  margin-bottom: 120px;
+  width: 100%;
+  position: relative;
+}
+
+.simple-steps ul li img {
+  max-height: 100%;
+  max-width: 50%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 56%;
+}
+
+.simple-steps ul li:nth-child(even) img {
+  left: 3%;
+  max-width: 40%;
+}
+
+.simple-steps ul li:nth-child(3) img {
+  left: 60%;
+}
+
+.simple-steps ul li .steps-text {
+  width: 50%;
+  position: relative;
+  left: 0;
+}
+
+.simple-steps ul li:nth-child(even) .steps-text {
+  left: 50%;
+}
+
+.simple-steps ul li .steps-text h2 {
+  font-size: 26px;
+  font-weight: 500;
+  color: #292929;
+  margin-bottom: 17px;
+}
+
+.simple-steps ul li .steps-text h3 {
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-weight: 500;
+  color: #676767;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.simple-steps ul li .steps-text p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #686868;
+  margin-bottom: 40px;
+}
+
+.simple-steps ul li .steps-text p strong {
+  text-transform: uppercase;
+  color: #555;
+}
+
+
+
+
+
+
+.start-learning-container {
+  width: 100vw;
+  height: 60px;
+  padding: 70px 0 140px 0;
+  background: #FEFEFE;
+}
+
+.start-learning-button {
+  display: inline-block;
+  margin: auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.simple-steps ul li img.correct {
+  margin-left: 7%;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1150px) {
+  .simple-steps ul li img.correct {
+    margin-left: -6%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .simple-steps ul li img.correct {
+    margin-left: -2%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .simple-steps .main-heading-container {
+    width: 100vw;
+    padding: 0 5vw;
+    height: 250px;
+  }
+  
+  .simple-steps ul li {
+    width: 90%;
+  }
+  
+  .simple-steps ul li img {
+    display: none;
+  }
+  
+  .simple-steps ul li .steps-text {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    left: 0;
+  }
+  
+  .simple-steps ul li:nth-child(even) .steps-text {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .start-learning-container {
+    padding: 0 0 140px 0;
+  }
+}

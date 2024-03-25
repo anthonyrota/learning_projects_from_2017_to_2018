@@ -1,0 +1,350 @@
+* {
+  margin: 0;
+  padding: 0;
+  
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+
+
+
+
+body, html {
+  font-family: "Open Sans", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #222;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+
+body.no-scroll::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #BBB;
+  border-radius: 1px;
+}
+
+
+
+
+
+
+
+
+#playground {
+  outline: none;
+  border: none;
+  margin: none;
+  padding: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.no-highlight {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+
+
+
+
+.code-instructions {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 360px;
+  height: 100vh;
+  background: transparent;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition: .4s transform ease-out;
+}
+
+.code-instructions::-webkit-scrollbar {
+  background: #FFF;
+  width: 20px;
+}
+
+.code-instructions::-webkit-scrollbar-thumb {
+  background: #BBB;
+  border-radius: 1px;
+}
+
+.code-instructions.slide-out {
+  transform: translateX(-200%);
+}
+
+.code-instructions .instructions-title {
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  background: #EEE;
+  background: -webkit-linear-gradient(to bottom, #FFF, #EEE);
+  background:    -moz-linear-gradient(to bottom, #FFF, #EEE);
+  background:      -o-linear-gradient(to bottom, #FFF, #EEE);
+  background:         linear-gradient(to bottom, #FFF, #EEE);
+  
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  padding-left: 40px;
+  color: #989898;
+  border-bottom: 1px solid #BCBCBC;
+}
+
+.code-instructions .instructions-summary {
+  padding: 30px;
+  margin-top: 50px;
+  margin-left: -5px;
+  background: #FFF;
+  min-height: 20%;
+  color: #333;
+  font-size: 14px;
+  border-bottom: 2px solid #aaa;
+}
+
+.code-instructions .instructions-summary h2 {
+  font-size: 25px;
+  margin-bottom: -20px;
+  color: #262626;
+}
+
+.code-instructions .instructions-summary code {
+  font-size: 13px;
+}
+
+.code-instructions .main-instructions {
+  padding: 40px;
+  margin-left: -5px;
+  background: #FFF;
+  min-height: 20%;
+  color: #333;
+  border-bottom: 2px solid #aaa;
+}
+
+.resize-instructions {
+  z-index: 99999999;
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  left: -10px;
+  top: 0;
+  background-color: #262626;
+  cursor: w-resize;
+  box-shadow: 0 2px 3px 0 #000;
+}
+
+
+
+
+
+
+.code-wrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: calc(100vw - 360px);
+}
+
+.code-wrapper.slide-out {
+  transition: .4s ease-out;
+  width: calc(100vw - 10px);
+}
+
+
+
+
+
+.code-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55%;
+  height: 100%;
+  background-color: #2A3A4A;
+  box-shadow: 0 2px 3px 0 #000;
+}
+
+
+
+
+
+.code-container .code-area {
+  position: relative;
+  width: 100%;
+  height: 33.3%;
+  float: left;
+}
+
+
+
+
+
+.code-container .code-area h3 {
+  color: #EFEFEF;
+  margin-left: 50px;
+  margin-top: 2px;
+  font-size: 16px;
+  transition: .4s ease-out;
+}
+
+
+
+
+
+.code-container .code-area .code-input {
+  width: 100%;
+  height: calc(100% - 25px);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+
+
+
+.code-bar {
+  z-index: 9;
+  width: 100%;
+  height: 25px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-shadow: 0 0 3px 0 #000;
+}
+
+.code-bar:not(#html-bar) {
+  cursor: n-resize;
+}
+
+
+
+
+
+.resize-editor {
+  z-index: 99999999;
+  position: absolute;
+  width: 15px;
+  height: 100%;
+  right: -15px;
+  top: 0;
+  background-color: #253642;
+  cursor: w-resize;
+  box-shadow: 0 2px 3px 0 #000;
+}
+
+
+
+
+
+.code-output {
+  outline: 0;
+  border: 0;
+  
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: calc(45% - 15px);
+  height: 100%;
+  
+  background: #FEFEFE;
+}
+
+
+
+
+
+.ace_editor {
+  background: #354551 !important;
+}
+
+.ace_active-line {
+  background: transparent !important;
+}
+
+.ace_selection {
+  background: #45555F !important;
+}
+
+.ace_gutter {
+  background: #243440 !important;
+}
+
+.ace_gutter-active-line {
+  background: #354551 !important;
+}

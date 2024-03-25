@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>image Filters</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/filter.css">
+  </head>
+  <body>
+    <div class="goto-top">
+      <div class="arrow-up"></div>
+    </div>
+    
+    <header>
+      <div class="title">
+        <h1>ImageFilter.com</h1>
+        <h2>#1 Image Filtering Service</h2>
+      </div>
+      
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Try it out!</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+        <li><a href="tech.html">How it works</a></li>
+      </ul>
+    </header>
+    
+    <div class="modal-outer" id="download-modal">
+      <div class="modal-inner">
+        <div class="modal-close" id="close-download-modal">&times;</div>
+        
+        <h1 class="download-info">Download Your Filtered Image</h1>
+        
+        <input id="file-type" class="form-input" placeholder="File Type">
+        <input id="file-name" class="form-input" placeholder="File Name">
+        
+        <span class="input-description">File Quality</span>
+        <span id="file-quality-value" class="input-value">1</span>
+        <input id="file-quality" type="range" min="0.1" max="1" value="1" step="0.001" class="slider">
+        
+        <a id="download-image" class="download-button">Download</a>
+      </div>
+    </div>
+    
+    <div class="wrapper">
+      <div class="upload">
+        <input type="file" id="upload" accept="image/*">
+        <label class="submit-button" for="upload">Choose Image</label>
+        <button class="submit-button" id="submit">Filter!</button>
+      </div>
+      
+      <div class="filter-container" id="container">
+        <canvas id="canvas"></canvas>
+        <div class="overlay">
+          <a class="download-button">Download</a>
+        </div>
+      </div>
+      
+      <ul class="filters">
+        <!--<li>-->
+        <!--  <span class="close">&times;</span>-->
+          
+        <!--  <div class="dropdown">-->
+        <!--    <input type="checkbox" id="dropdown-input-1">-->
+        <!--    <label for="dropdown-input-1">Contrast</label>-->
+            
+        <!--    <ul class="options">-->
+        <!--      <li>Blur</li>-->
+        <!--      <li>Contrast</li>-->
+        <!--      <li>Invert</li>-->
+        <!--      <li>Custom</li>-->
+        <!--      <li>Blur</li>-->
+        <!--      <li>Contrast</li>-->
+        <!--      <li>Invert</li>-->
+        <!--      <li>Custom</li>-->
+        <!--      <li>Blur</li>-->
+        <!--      <li>Contrast</li>-->
+        <!--      <li>Invert</li>-->
+        <!--      <li>Custom</li>-->
+        <!--      <li>Blur</li>-->
+        <!--      <li>Contrast</li>-->
+        <!--      <li>Invert</li>-->
+        <!--      <li>Custom</li>-->
+        <!--    </ul>-->
+        <!--  </div>-->
+          
+        <!--  <ul class="toggles">-->
+        <!--    <li>-->
+        <!--      <span class="name">Width</span><span class="count">20</span>-->
+        <!--      <input type="range" min="1" max="1000" value="20" class="slider">-->
+        <!--    </li>-->
+        <!--    <li>-->
+        <!--      <span class="name">Height</span><span class="count">20</span>-->
+        <!--      <input type="range" min="1" max="5" value="20" class="slider">-->
+        <!--    </li>-->
+        <!--    <li>-->
+        <!--      <span class="name matrix-header">Matrix</span>-->
+        <!--      <table class="matrix-table">-->
+        <!--        <tr>-->
+        <!--          <td><input type="number" value="0" class="matrix-input text-input"></td>-->
+        <!--          <td><input type="number" value="0" class="matrix-input text-input"></td>-->
+        <!--          <td><input type="number" value="0" class="matrix-input text-input"></td>-->
+        <!--        </tr>-->
+        <!--        <tr>-->
+        <!--          <td><input type="number" value="0" class="matrix-input text-input"></td>-->
+        <!--          <td><input type="number" value="0" class="matrix-input text-input"></td>-->
+        <!--          <td><input type="number" value="0" class="matrix-input text-input"></td>-->
+        <!--        </tr>-->
+        <!--        <tr>-->
+        <!--          <td><input type="number" value="0" class="matrix-input text-input"></td>-->
+        <!--          <td><input type="number" value="0" class="matrix-input text-input"></td>-->
+        <!--          <td><input type="number" value="0" class="matrix-input text-input"></td>-->
+        <!--        </tr>-->
+        <!--      </table>-->
+        <!--    </li>-->
+        <!--    <li>-->
+        <!--      <span class="name">Multiply (Scale Factor)</span>-->
+        <!--      <input type="number" value="0" class="text-input">-->
+        <!--    </li>-->
+        <!--  </ul>-->
+        <!--</li>-->
+      </ul>
+      
+      <div class="add-button-container">
+        <button id="add-simple-filter" class="add-button">Simple Filter</button>
+        <button id="add-color-matrix-preset" class="add-button">Color Matrix</button><br>
+        <button id="add-convolution-matrix" class="add-button">Convolution Matrix</button>
+      </div>
+    </div>
+    
+    <footer>
+      <h1 class="copyright">&copy; ImageFilter.com 2017</h1>
+    </footer>
+    
+    <script src="libs/jquery.js"></script>
+    <script src="libs/pixi.js"></script>
+    <script src="libs/pixi-filters.js"></script>
+    <script src="libs/sweetalert.js"></script>
+    <script src="libs/download.js"></script>
+    
+    <script src="js/base.js"></script>
+    
+    <script src="js/color.js"></script>
+    <script src="js/listiteminput.js"></script>
+    <script src="js/card.js"></script>
+    <script src="js/simplefilter.js"></script>
+    <script src="js/colormatrixfilter.js"></script>
+    <script src="js/convolutionfilter.js"></script>
+    <script src="js/downloadmanager.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

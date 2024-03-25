@@ -1,0 +1,58 @@
+.webpage-footer {
+  position: relative;
+  background: #1C2331;
+  height: 250px;
+}
+
+.webpage-footer .contact-us {
+  width: 100%;
+  position: absolute;
+  left: 25px;
+  bottom: 5px;
+}
+
+.webpage-footer .contact-us ul {
+  display: inline-block;
+  list-style: none;
+}
+
+.webpage-footer .contact-us ul li {
+  display: inline-block;
+}
+
+.webpage-footer .contact-us ul li .fa {
+  width: 50px;
+  height: 50px;
+}
+
+.webpage-footer .contact-us ul li .fa-facebook {
+  color: #3B5998;
+}
+
+.webpage-footer .contact-us ul li .fa-twitter {
+  color: #4099FF;
+}
+
+.webpage-footer .contact-us ul li .fa-instagram {
+  color: #fb3958;
+}
+
+.webpage-footer .contact-us ul li .fa-linkedin {
+  color: #0077B5;
+}
+
+.webpage-footer .contact-us ul li .fa-envelope {
+  color: #3e65cf;
+}
+
+.webpage-footer .contact-us ul li .fa-youtube-play {
+  color: #BB0000;
+}
+
+@media screen and (max-width: 400px) {
+  .webpage-footer .contact-us ul li .fa {
+    font-size: 25px;
+    width: 40px;
+    height: 40px;
+  }
+}
