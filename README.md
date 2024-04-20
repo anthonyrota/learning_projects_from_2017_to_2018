@@ -1,5 +1,3 @@
-## These are some projects I made while learning to code
-
 YT Demo Video Links
 * [3D Low Poly Terrain](https://youtu.be/lOd14FCa0RA)
 * [LiveCode](https://youtu.be/AVDTNbdj1qQ)
